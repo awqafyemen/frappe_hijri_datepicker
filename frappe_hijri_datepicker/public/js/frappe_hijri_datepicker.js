@@ -25,7 +25,7 @@ frappe.ui.form.ControlDate = frappe.ui.form.ControlDate.extend({
     kuwaiticalendar: function (adjust) {
         if (adjust) {
             var today = new Date(moment(adjust).locale('en').format("YYYY-MM-DD"));
-            var day = today.getDate();
+            var day = today.getDate()+1;
             var month = today.getMonth() + 1;
             var year = today.getFullYear();
             var calendar = $.calendars.instance('gregorian', 'ar');
